@@ -1,11 +1,177 @@
-.img img {
-    max-width: 10%; /* La imagen no será más grande que su contenedor */
-    height: 150px; /* Mantener la proporción de aspecto */
-    display: block; /* Asegurarse de que la imagen no tenga espacio extra debajo */
-    margin: 100px; /* Centrar la imagen horizontalmente */
-    border-radius: 10%;
+/* Estilos para el contenedor principal */
+#principal {
+    float: left;
+    width: 70%; /* El contenedor principal ocupará el 70% del ancho del documento */
+    background-color: #ffffff; /* Gris claro */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-right: 20px; /* Espacio entre el contenedor principal y secundario */
 }
 
+/* Estilos para la imagen */
+.img img {
+    max-width: 10%; /* La imagen no será más grande que su contenedor */
+    height: auto; /* Mantener la proporción de aspecto */
+    display: block; /* Asegurarse de que la imagen no tenga espacio extra debajo */
+    margin: 0 auto 20px auto; /* Centrar la imagen horizontalmente y agregar espacio en la parte inferior */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.social {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .social .social-item {
+    margin: 0 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social .social-item .social-link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    text-align: center;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg)
+      translate(0, 0);
+    transition: all 0.4s ease;
+  }
+  
+  .social .social-item .social-link::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    background: #b1b1b1;
+    transition: all 0.4s ease;
+    transform: rotate(0deg) skewY(-45deg);
+  }
+  
+  .social .social-item .social-link::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -5px;
+    height: 10px;
+    width: 100%;
+    background: #b1b1b1;
+    transition: all 0.4s ease;
+    transform: rotate(0deg) skewX(-45deg);
+  }
+  
+  .social .social-item .social-link:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(5px, -5px);
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .social .social-item:nth-child(1) a {
+    color: #3b5999;
+  }
+  
+  .social .social-item:nth-child(1):hover a {
+    background: #3b5999;
+  }
+  
+  .social .social-item:nth-child(1):hover a::before {
+    background: #3b5999;
+  }
+  
+  .social .social-item:nth-child(1):hover a::after {
+    background: #3b5999;
+  }
+  
+  .social .social-item:nth-child(2) a {
+    color: #55acee;
+  }
+  
+  .social .social-item:nth-child(2):hover a {
+    background: #55acee;
+  }
+  
+  .social .social-item:nth-child(2):hover a::before {
+    background: #55acee;
+  }
+  
+  .social .social-item:nth-child(2):hover a::after {
+    background: #55acee;
+  }
+  
+  .social .social-item:nth-child(3) a {
+    color: #dd4b39;
+  }
+  
+  .social .social-item:nth-child(3):hover a {
+    background: #dd4b39;
+  }
+  
+  .social .social-item:nth-child(3):hover a::before {
+    background: #dd4b39;
+  }
+  
+  .social .social-item:nth-child(3):hover a::after {
+    background: #dd4b39;
+  }
+  
+  .social .social-item:nth-child(4) a {
+    color: #e4405f;
+  }
+  
+  .social .social-item:nth-child(4):hover a {
+    background: #e4405f;
+  }
+  
+  .social .social-item:nth-child(4):hover a::before {
+    background: #e4405f;
+  }
+  
+  .social .social-item:nth-child(4):hover a::after {
+    background: #e4405f;
+  }
+  
+  .social .social-item .social-link:hover {
+    color: #ffffff;
+  }
+  
+  
+
+
+/* Estilos para el título de información personal */
+.datos-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la lista de información personal */
+.datos-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.datos-container li {
+    margin-bottom: 10px;
+}
+
+.datos-container li b {
+    font-weight: bold;
+}
+
+/* Estilos para el botón de descarga */
 .botao {
     width: 125px;
     height: 45px;
@@ -23,28 +189,28 @@
     cursor: pointer;
     filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
     transition: .5s linear;
-  }
-  
-  .botao .mysvg {
+}
+
+.botao .mysvg {
     display: none;
-  }
-  
-  .botao:hover {
+}
+
+.botao:hover {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     transition: .5s linear;
-  }
-  
-  .botao:hover .texto {
+}
+
+.botao:hover .texto {
     display: none;
-  }
-  
-  .botao:hover .mysvg {
+}
+
+.botao:hover .mysvg {
     display: inline;
-  }
-  
-  .botao:hover::before {
+}
+
+.botao:hover::before {
     content: '';
     position: absolute;
     top: -3px;
@@ -56,15 +222,14 @@
     border-right: 3.5px solid #fff;
     border-radius: 50%;
     animation: animateC 2s linear infinite;
-  }
-  
-  @keyframes animateC {
+}
+
+@keyframes animateC {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
+}
