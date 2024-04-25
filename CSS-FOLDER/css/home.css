@@ -1,12 +1,18 @@
 /* Estilos para el contenedor principal */
+.container-principal{
+  padding-left: 50px;
+  padding-top: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #principal {
     float: left;
     width: 30%; /* El contenedor principal ocupará el 70% del ancho del documento */
-    background-color: #ffffff; /* Gris claro */
+    background-color: #ebebeb; /* Gris claro */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-right: 20px; /* Espacio entre el contenedor principal y secundario */
+    margin-right: 200px; /* Espacio entre el contenedor principal y secundario */
 }
 
 /* Estilos para la imagen */
@@ -16,6 +22,12 @@
     display: block; /* Asegurarse de que la imagen no tenga espacio extra debajo */
     margin: 0 auto 20px auto; /* Centrar la imagen horizontalmente y agregar espacio en la parte inferior */
     border-radius: 10px; /* Bordes redondeados */
+}
+
+.name{
+  text-align: center; /* Alineación al centro vertical */
+  font-size: 36px; /* Tamaño de fuente */
+
 }
 
 .social {
@@ -58,7 +70,7 @@
     left: -10px;
     height: 100%;
     width: 10px;
-    background: #b1b1b1;
+    background: #757575;
     transition: all 0.4s ease;
     transform: rotate(0deg) skewY(-45deg);
   }
@@ -151,7 +163,7 @@
 /* Estilos para la lista de información personal */
 
 .datos-container{
-  background-color: rgb(218, 218, 218);
+  background-color: rgb(213, 213, 213);
   border-radius: 5px;
   padding: 2px 5px 8px 0px;
   display: flex;
