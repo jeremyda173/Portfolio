@@ -147,15 +147,6 @@
   .social .social-item .social-link:hover {
     color: #ffffff;
   }
-  
-  
-
-
-/* Estilos para el título de información personal */
-.datos-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 
 /* Estilos para la lista de información personal */
 .datos-container ul {
