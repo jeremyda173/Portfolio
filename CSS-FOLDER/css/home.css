@@ -1,7 +1,7 @@
 /* Estilos para el contenedor principal */
 #principal {
     float: left;
-    width: 70%; /* El contenedor principal ocupará el 70% del ancho del documento */
+    width: 30%; /* El contenedor principal ocupará el 70% del ancho del documento */
     background-color: #ffffff; /* Gris claro */
     padding: 40px;
     border-radius: 10px;
@@ -11,7 +11,7 @@
 
 /* Estilos para la imagen */
 .img img {
-    max-width: 10%; /* La imagen no será más grande que su contenedor */
+    max-width: 50%; /* La imagen no será más grande que su contenedor */
     height: auto; /* Mantener la proporción de aspecto */
     display: block; /* Asegurarse de que la imagen no tenga espacio extra debajo */
     margin: 0 auto 20px auto; /* Centrar la imagen horizontalmente y agregar espacio en la parte inferior */
