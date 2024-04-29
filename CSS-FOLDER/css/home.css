@@ -50,6 +50,11 @@
       transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Transición para color de fondo, transform y opacidad */
       opacity: 1; /* Opacidad inicial */
   }
+
+  .social-buttons button a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color de texto predeterminado */
+}
   
   #instagram-btn {
     background-color: #bc2a8d; /* Color rosa de Instagram */
