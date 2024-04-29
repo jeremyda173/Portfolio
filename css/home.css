@@ -1,0 +1,237 @@
+/* Estilos para el menú */
+.menu {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-items.open {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.menu-items li {
+    padding: 12px 20px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: #ccc;
+}
+
+.menu-toggle i {
+    font-size: 20px;
+}
+
+
+
+/* Estilos para el contenedor principal */
+.container-principal {
+    padding-left: 50px;
+    padding-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#principal {
+    float: left;
+    width: 30%; /* El contenedor principal ocupará el 30% del ancho del documento */
+    background-color: #f6f6f6; /* Gris claro */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-right: 200px; /* Espacio entre el contenedor principal y secundario */
+}
+
+/* Estilos para la imagen */
+.img img {
+    max-width: 50%; /* La imagen no será más grande que su contenedor */
+    height: auto; /* Mantener la proporción de aspecto */
+    display: block; /* Asegurarse de que la imagen no tenga espacio extra debajo */
+    margin: 0 auto 20px auto; /* Centrar la imagen horizontalmente y agregar espacio en la parte inferior */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.name {
+    text-align: center; /* Alineación al centro vertical */
+    font-size: 36px; /* Tamaño de fuente */
+}
+
+/* Estilos CSS para los botones con iconos */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease; /* Transición para color de fondo, transform y opacidad */
+    opacity: 1; /* Opacidad inicial */
+}
+
+.social-buttons button a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color de texto predeterminado */
+}
+
+#instagram-btn {
+    background-color: #bc2a8d; /* Color rosa de Instagram */
+}
+
+#linkedin-btn {
+    background-color: #0077B5; /* Color azul de LinkedIn */
+}
+
+#github-btn {
+    background-color: #1b1919; /* Color gris oscuro de GitHub */
+}
+
+button i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+.social-buttons button:hover {
+    transform: translateY(-3px); /* Efecto de elevación al pasar el cursor */
+    background-color: rgba(182, 182, 182, 0.2); /* Cambio de color de fondo al pasar el cursor */
+    opacity:  0.8; /* Reducción en opacidad al pasar el cursor */
+}
+
+/* Estilos para la lista de información personal */
+.datos-container {
+    background-color: rgb(213, 213, 213); /* Color de fondo gris */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Contenedor de estilo flexbox */
+    justify-content: space-around; /* Distribución uniforme de los elementos */
+    align-items: center; /* Alineación vertical al centro */
+    margin-top: 70px; /* Margen superior */
+    margin-bottom: 50px; /* Margen inferior */
+}
+
+.datos-container i {
+    margin-right: 10px; /* Margen a la derecha del icono */
+    font-size: 20px; /* Tamaño del ícono */
+    color: #ffffff; /* Color del icono (blanco) */
+    background-color: #007bff; /* Color de fondo del icono (azul) */
+    width: 36px; /* Ancho del icono */
+    height: 36px; /* Altura del icono */
+    text-align: center; /* Alineación del texto en el icono */
+    line-height: 36px; /* Altura de línea del texto en el icono */
+    border-radius: 50%; /* Bordes redondeados para hacer círculos */
+}
+
+/* Estilos individuales para cada ícono */
+.datos-container .fa-map-marker-alt {
+    background-color: #ffcc00; /* Fondo amarillo para el ícono de ubicación */
+}
+
+.datos-container .fa-envelope {
+    background-color: #28a745; /* Fondo verde para el ícono de email */
+}
+
+.datos-container .fa-phone {
+    background-color: #dc3545; /* Fondo rojo para el ícono de teléfono */
+}
+
+.datos-container .fa-calendar-alt {
+    background-color: #6610f2; /* Fondo morado para el ícono de fecha de nacimiento */
+}
+
+.datos-container ul {
+    list-style: none; /* Eliminar viñetas de la lista */
+    padding: 0; /* Eliminar relleno interno de la lista */
+}
+
+.datos-container li {
+    margin-bottom: 10px; /* Margen inferior entre elementos de la lista */
+}
+
+/* Estilos para el botón de descarga Cv */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttond {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.buttond:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+
+.buttond::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+}
+
+.botao-container button a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color de texto predeterminado */
+}
