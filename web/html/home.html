@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/web/css/home.css">
+    <script src="/web/scripts.js"></script>
 </head>
 <body>
 
-<!--Menu-->
+<!-- Menu -->
 <div class="menu">
     <ul class="menu-items">
-        <li><a href="#" onclick="loadContent('home')"><span>&#127968;</span> Home</a></li>
-        <li><a href="#" onclick="loadContent('about')"><span>&#x1F468;</span> About Me</a></li>
-        <li><a href="#" onclick="loadContent('works')"><span>&#x1F4BB;</span> Works</a></li>
-        <li><a href="/html/contact.html" onclick="loadContent('contact')"><span>&#x1F4E9;</span> Contact</a></li>
+        <li><a href="#" onclick="loadContent('home')">🏠 Home</a></li>
+        <li><a href="#" onclick="loadContent('about')">👨 About Me</a></li>
+        <li><a href="#" onclick="loadContent('works')">💼 Works</a></li>
+        <li><a href="/web/html/contact.html" onclick="loadContent('contact')">✉️ Contact</a></li>
     </ul>    
     <div class="menu-toggle" onclick="toggleMenu()">
         <i class="fas fa-bars"></i>
     </div>
 </div>
-<!--Fin Menu-->
+<!-- End Menu -->
 
 <div class="container-principal">
     <!-- Contenedor Principal -->
@@ -62,13 +64,12 @@
     </div>
 </div>
 
-<div id="secundario">
+<div class="container-secundario">
     <!-- Contenedor Secundario -->
-    <h2>Contenedor Secundario</h2>
-    <p>Este es el contenido del contenedor secundario.</p>
+    <div id="secundario">
+        <!-- Aquí se cargará el contenido dinámicamente -->
+    </div>
 </div>
-
-<script src="/scripts.js"></script>
 
 </body>
 </html>
