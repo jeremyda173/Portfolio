@@ -17,7 +17,7 @@ function toggleMenu() {
 
 function loadContent(pageName) {
     const secundarioContainer = document.getElementById('secundario');
-    const filePath = `/web/${pageName}.html`; // Ruta del archivo HTML correspondiente
+    const filePath = `/web/html/${pageName}.html`; // Ruta del archivo HTML correspondiente
     
     // Realiza una solicitud HTTP para cargar el contenido del archivo
     fetch(filePath)
@@ -34,45 +34,3 @@ function loadContent(pageName) {
             console.error('Error loading content:', error);
         });
 }
-
-
-
-// function loadContent(page) {
-//     var secundario = document.getElementById('secundario');
-
-//     // Limpiar contenido actual del contenedor secundario
-//     secundario.innerHTML = '';
-
-//     // Cargar contenido específico según la página seleccionada
-//     if (page === 'home') {
-//         secundario.innerHTML = `
-//             <h2>Contenido de la Página de Inicio</h2>
-//             <p>Bienvenido a mi portafolio. Aquí encontrarás información relevante sobre mí.</p>
-//         `;
-//     } else if (page === 'about') {
-//         secundario.innerHTML = `
-//             <h2>Sobre Mí</h2>
-//             <p>Soy Jeremy Domínguez, un desarrollador web apasionado por crear experiencias digitales.</p>
-//         `;
-//     } else if (page === 'works') {
-//         secundario.innerHTML = `
-//             <h2>Proyectos y Trabajos</h2>
-//             <p>Echa un vistazo a algunos de mis proyectos y trabajos recientes.</p>
-//             <ul>
-//                 <li>Proyecto A</li>
-//                 <li>Proyecto B</li>
-//                 <li>Proyecto C</li>
-//             </ul>
-//         `;
-//     } else if (page === 'contact') {
-//         secundario.innerHTML = `
-//             <h2>Proyectos y Trabajos</h2>
-//             <p>Echa un vistazo a algunos de mis proyectos y trabajos recientes.</p>
-//             <ul>
-//                 <li>Proyecto A</li>
-//                 <li>Proyecto B</li>
-//                 <li>Proyecto C</li>
-//             </ul>
-//         `;
-//     }
-// }
