@@ -235,3 +235,18 @@ button i {
     text-decoration: none; /* Elimina el subrayado */
     color: inherit; /* Usa el color de texto predeterminado */
 }
+
+.container-secundario {
+    padding: 200px;
+    margin-left: 600px;
+    margin-top: 0px;
+    background-color: #cbcbcb;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#secundario {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
