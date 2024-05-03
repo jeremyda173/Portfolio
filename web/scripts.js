@@ -16,10 +16,10 @@ function toggleMenu() {
 }
 
 function loadContent(pageName) {
+    console.log('Loading page:', pageName);
     const secundarioContainer = document.getElementById('secundario');
-    const filePath = `/web/html/${pageName}.html`; // Ruta del archivo HTML correspondiente
-    
-    // Realiza una solicitud HTTP para cargar el contenido del archivo
+    const filePath = `/web/html/${pageName}.html`;
+
     fetch(filePath)
         .then(response => {
             if (!response.ok) {
@@ -28,16 +28,14 @@ function loadContent(pageName) {
             return response.text();
         })
         .then(html => {
-            // Inserta el contenido HTML en el contenedor secundario
             secundarioContainer.innerHTML = html;
-
-            // Actualiza el título en función de la página cargada
             updatePageTitle(pageName);
         })
         .catch(error => {
             console.error('Error loading content:', error);
         });
 }
+
 
 function updatePageTitle(pageName) {
     // Selecciona el elemento del título dentro del contenedor secundario
