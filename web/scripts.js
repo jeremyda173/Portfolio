@@ -28,9 +28,49 @@ function loadContent(pageName) {
             return response.text();
         })
         .then(html => {
-            secundarioContainer.innerHTML = html; // Inserta el contenido en el contenedor secundario
+            // Inserta el contenido HTML en el contenedor secundario
+            secundarioContainer.innerHTML = html;
+
+            // Actualiza el título en función de la página cargada
+            updatePageTitle(pageName);
         })
         .catch(error => {
             console.error('Error loading content:', error);
         });
 }
+
+function updatePageTitle(pageName) {
+    // Selecciona el elemento del título dentro del contenedor secundario
+    const pageTitleElement = document.querySelector('.header h1');
+
+    // Establece el título según la página cargada
+    switch (pageName) {
+        case 'about-me':
+            pageTitleElement.textContent = 'About Me'; // Cambia el título para la página "About-me"
+            break;
+        case 'works':
+            pageTitleElement.textContent = 'Works'; // Cambia el título para la página "About-me"
+            break;
+        case 'contact':
+            pageTitleElement.textContent = 'Contact'; // Cambia el título para la página "About-me"
+            break;    
+        default:
+            pageTitleElement.textContent = 'Home'; // Por defecto, muestra "Home" como título
+            break;
+    }
+}
+
+
+// Ejemplo de carga de contenido al hacer clic en un enlace
+document.querySelector('.menu-items').addEventListener('click', function(event) {
+    if (event.target.tagName === 'A') {
+        const pageName = event.target.getAttribute('data-page');
+        loadContent(pageName);
+    }
+});
+
+// Cargar contenido inicial al cargar la página
+window.addEventListener('load', function() {
+    loadContent('home'); // Carga la página inicial
+});
+
