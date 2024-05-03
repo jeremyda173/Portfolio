@@ -14,7 +14,7 @@
 
     <div class="contact-form">
         <h3>Send Us a Message</h3>
-        <form id="contactForm" action="#" method="post">
+        <form id="contactForm" onsubmit="submitForm(event)">
             <div class="form-group">
                 <label for="name">Name *</label>
                 <div class="input-with-icon">
@@ -45,7 +45,7 @@
     <div id="successModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>Envío exitoso! 😊</p>
+            <p id="successMessage">Envío exitoso! 😊</p>
         </div>
     </div>
 </div>
