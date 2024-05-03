@@ -38,3 +38,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+console.log("Bienvenidos");
+function submitForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const formData = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    fetch('http://localhost:3000/submit_form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Mensaje enviado correctamente');
+            // Aquí puedes redirigir a una página de éxito o realizar otras acciones
+        } else {
+            throw new Error('Error al enviar el mensaje');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error al enviar el mensaje');
+    });
+}
+
