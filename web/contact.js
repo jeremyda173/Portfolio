@@ -27,13 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
     // Validar el formulario al cargar la página
     validateForm();
 
-    // Envío del formulario (simulado con alerta)
+    // Envío del formulario mediante AJAX
     form.addEventListener('submit', function (event) {
         event.preventDefault(); // Evitar el envío predeterminado del formulario
 
-        // Simular el envío del formulario (puedes agregar tu lógica de envío aquí)
-        alert('Formulario enviado correctamente!');
-        form.reset(); // Reiniciar el formulario después del envío
-        validateForm(); // Volver a validar el formulario después del reinicio
+        // Obtener datos del formulario
+        const formData = new FormData(form);
+
+        // Enviar datos al servidor mediante AJAX
+        fetch('submit_form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Mostrar mensaje de éxito o error
+            alert(data); // Mostrar la respuesta del servidor en una alerta (puedes cambiar esto)
+            form.reset(); // Reiniciar el formulario después del envío
+            validateForm(); // Volver a validar el formulario después del reinicio
+        })
+        .catch(error => {
+            console.error('Error al enviar el formulario:', error);
+            alert('Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.');
+        });
     });
 });
