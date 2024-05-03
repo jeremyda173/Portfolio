@@ -236,42 +236,121 @@ button i {
     color: inherit; /* Usa el color de texto predeterminado */
 }
 
+/* Estilos para el contenedor secundario */
 .container-secundario {
-    padding: 200px;
-    margin-left: 600px;
-    margin-top: 0px;
-    background-color: #cbcbcb;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 40%; /* Ocupa el 40% del ancho del contenedor padre */
+    margin-left: 1%; /* Márgen izquierdo para separar del contenedor principal */
+    vertical-align: top; /* Alinea en la parte superior */
+    box-sizing: border-box; /* Incluye el padding y border en el width */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container-principal,
+    .container-secundario {
+        display: block;
+        width: auto;
+        margin-left: 0;
+    }
+}
+
+.container-secundario .header {
+    margin-bottom: 40px;
+}
+
+.container-secundario #secundario {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: #333333;
+}
+
+.linea-separadora {
+    flex: 1;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 0 20px;
 }
 
 #secundario {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+/* Estilos para el contenido dinámico dentro del contenedor secundario */
+#secundario p {
+    margin-bottom: 20px;
+}
+
+#secundario ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#secundario li {
+    margin-bottom: 10px;
+}
+
+
+
+/* #secundario {
     font-size: 20px;
     line-height: 1.6;
 }
 
-hr{
-    display: block;
-    unicode-bidi: isolate;
-    margin-inline-start: 8em;
-    margin-inline-end: 8em;
-    overflow: hidden;
-    border-width: 2px;
-    border-style: inset;
-    border-color: #cacaca;
-    width: 200px;
+.container-secundario {
+    padding: 100px;
+    margin-left: 600px;
+    margin-top: 0px;
+    background-color: #efefef;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.namepage{
+
+.header {
     display: flex;
-    justify-content: start;
     align-items: center;
-    padding: 3px 0px 2px 0px;
-    /* padding-bottom: 100px; */
-    height: 10vh;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: -1px;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    margin-top: -150px;
 }
 
+.header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.header hr{
+    width: 20%;
+    height: 1px;
+    max-width: 90%;
+    background: #6082f1;
+    margin: 70px auto;
+    border: none;
+}
+
+.linea-separadora {
+    flex: 1;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin-left: 20px;
+} */

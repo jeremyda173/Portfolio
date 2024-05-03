@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/web/css/contact.css">
     <title>Contact</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
-<!-- Contenedor de la sección de Contacto -->
+
 <div id="contacto">
     <h2>Contact</h2>
     <p>I'm Always Open To Discussing Product design work or partnerships.</p>
 
-    <!-- Formulario de Contacto -->
     <div class="contact-form">
         <h3>Send Us a Message</h3>
-        <form id="contactForm" action="#" method="post">
+        <form id="contactForm" action="http://localhost:3000/submitForm" method="POST">
             <div class="form-group">
                 <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+                <div class="input-with-icon">
+                    <i class="far fa-user-circle"></i>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+            </div>                 
             <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" id="email" name="email" required>
+                <div class="input-with-icon">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <i class="far fa-envelope"></i>
+                </div>
             </div>
+            
             <div class="form-group">
                 <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-            </div>
+                <div class="input-with-icon">
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <i class="far fa-comment"></i>
+                </div>
+            </div>            
             <button type="submit">Submit</button>
         </form>
     </div>
 
-    <!-- Derechos de Autor -->
-    <div class="copyright">
-        <p>© 2024 All Rights Reserved by elite-themes24.</p>
+    <!-- Modal para mostrar mensaje de éxito -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="successMessage">Envío exitoso! 😊</p>
+        </div>
     </div>
 </div>
 
 <script src="/web/contact.js"></script>
-
 </body>
 </html>
