@@ -289,11 +289,9 @@ button i {
 }
 
 #secundario {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.6;
-    text-align: justify; /* Alinea el texto justificado */
-    max-width: 800px; /* Establece un ancho máximo para evitar que el contenido se extienda demasiado */
-    margin: 0 auto; /* Centra el contenido horizontalmente */
+    color: #555555;
 }
 
 /* Estilos para el contenido dinámico dentro del contenedor secundario */
