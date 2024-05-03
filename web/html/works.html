@@ -3,14 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/web/css/works.css">
-    <title>Document</title>
+    <title>Sketch para Diseño de Logo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #mini-menu {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #mini-menu a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #mini-menu a:hover {
+            background-color: #555;
+        }
+
+        #works {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .card-content {
+            text-align: center;
+        }
+
+        .card-content h2 {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .card-content p {
+            font-size: 16px;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
+    <!-- Mini menú -->
+    <div id="mini-menu">
+        <a href="#all">Todo</a>
+        <a href="#apps">Apps</a>
+        <a href="#menu">Menu</a>
+        <a href="#logins">Logins</a>
+    </div>
+
+    <!-- Contenido principal -->
     <div id="works">
-        <p>
-            Aún se encuentra en desarrollo. 🚧
-        </p>
-    </div>    
+        <p style="text-align: center;">Aún se encuentra en desarrollo. 🚧</p>
+
+        <!-- Tarjeta con imagen y nombre del diseñador -->
+        <div class="card">
+            <img src="/Public/field-6574455_640.jpg" alt="Nombre del Diseñador">
+            <div class="card-content">
+                <h2>Login</h2>
+                <p>Diseñador gráfico.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
