@@ -52,3 +52,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+    // Función para mostrar el modal de éxito
+    // Función para enviar el formulario
+    function submitForm(event) {
+        event.preventDefault(); // Prevenir el envío predeterminado del formulario
+
+        // Obtener el formulario y sus datos
+        const form = document.getElementById('contactForm');
+        const formData = new FormData(form);
+
+        // Enviar los datos mediante fetch
+        fetch('submit_form.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            // Mostrar notificación de éxito con SweetAlert
+            Swal.fire({
+                icon: 'success',
+                title: 'Envío exitoso!',
+                text: '¡Los datos se enviaron correctamente!',
+                confirmButtonText: 'Aceptar'
+            });
+
+            form.reset(); // Reiniciar el formulario después del envío
+        })
+        .catch(error => {
+            console.error('Error al enviar el formulario:', error);
+            alert('Ocurrió un error al enviar el formulario. Por favor, inténtelo de nuevo.');
+        });
+    }
