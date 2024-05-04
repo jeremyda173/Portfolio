@@ -239,12 +239,12 @@ button i {
 /* Estilos para el contenedor secundario */
 .container-secundario {
     display: inline-block;
-    width: 40%; /* Ocupa el 40% del ancho del contenedor padre */
-    margin-left: 1%; /* Márgen izquierdo para separar del contenedor principal */
+    width: 50%; /* Ocupa el 40% del ancho del contenedor padre */
+    margin-left: -1%; /* Márgen izquierdo para separar del contenedor principal */
     vertical-align: top; /* Alinea en la parte superior */
     box-sizing: border-box; /* Incluye el padding y border en el width */
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fafafa;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -307,8 +307,6 @@ button i {
 #secundario li {
     margin-bottom: 10px;
 }
-
-
 
 /* #secundario {
     font-size: 20px;
