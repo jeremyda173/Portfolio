@@ -48,9 +48,6 @@ function updatePageTitle(pageName) {
             break;
         case 'works':
             pageTitleElement.textContent = 'Works'; // Cambia el título para la página "Works"
-            break;
-        case 'contact':
-            pageTitleElement.textContent = 'Contact'; // Cambia el título para la página "Contact"
             break;    
         default:
             pageTitleElement.textContent = 'Home'; // Por defecto, muestra "Home" como título
