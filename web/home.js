@@ -68,4 +68,3 @@ document.querySelector('.menu-items').addEventListener('click', function(event) 
 window.addEventListener('load', function() {
     loadContent('home'); // Carga la página inicial
 });
-
