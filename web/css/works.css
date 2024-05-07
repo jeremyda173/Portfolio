@@ -24,73 +24,24 @@ body {
     background-color: #555;
 }
 
-.container-secundario {
-    display: inline-block;
-    width: 50%; /* Ocupa el 40% del ancho del contenedor padre */
-    margin-left: -1%; /* Márgen izquierdo para separar del contenedor principal */
-    vertical-align: top; /* Alinea en la parte superior */
-    box-sizing: border-box; /* Incluye el padding y border en el width */
+/* Estilos para el contenedor del menú */
+.menu-container {
+    background-color: #f8f9fa;
     padding: 20px;
-    background-color: #fafafa;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-    .container-principal,
-    .container-secundario {
-        display: block;
-        width: auto;
-        margin-left: 0;
-    }
-}
-
-.container-secundario .header {
-    margin-bottom: 40px;
-}
-
-.container-secundario #secundario {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.header h1 {
-    font-size: 28px;
-    color: #333333;
-}
-
-.linea-separadora {
-    flex: 1;
-    height: 1px;
-    background-color: #cccccc;
-    margin: 0 20px;
-}
-
-#secundario {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555555;
-}
-
-/* Estilos para el contenido dinámico dentro del contenedor secundario */
-#secundario p {
-    margin-bottom: 20px;
-}
-
-#secundario ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-#secundario li {
+/* Estilos para los enlaces del menú */
+.menu-container a {
+    display: block;
     margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.menu-container a:hover {
+    color: #007bff; /* Cambia el color al pasar el mouse por encima */
 }
