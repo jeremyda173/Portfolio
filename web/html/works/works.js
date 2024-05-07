@@ -1,29 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var worksContainer = document.getElementById('works-container');
+document.addEventListener("DOMContentLoaded", function() {
+    const miniMenuLinks = document.querySelectorAll("#mini-menu a");
+    const initialMessage = document.querySelector("#initial-message");
+    const worksContainer = document.querySelector("#works-container");
 
-    // Obtener todos los enlaces del menú
-    var menuLinks = document.querySelectorAll('#mini-menu a');
+    miniMenuLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
 
-    // Función para cargar y mostrar el contenido de la página seleccionada
-    function loadPage(event) {
-        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-
-        var pageURL = this.getAttribute('href'); // Obtener la URL de la página desde el atributo 'href'
-
-        // Realizar una solicitud HTTP (fetch) para cargar el contenido de la página
-        fetch(pageURL)
-            .then(response => response.text()) // Convertir la respuesta a texto
-            .then(html => {
-                // Insertar el HTML cargado dentro del worksContainer
-                worksContainer.innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error al cargar la página:', error);
+            // Remover la clase 'active' de todos los enlaces
+            miniMenuLinks.forEach(link => {
+                link.classList.remove("active");
             });
-    }
 
-    // Agregar un event listener a cada enlace del menú para cargar la página correspondiente
-    menuLinks.forEach(function(link) {
-        link.addEventListener('click', loadPage);
+            // Añadir la clase 'active' solo al enlace seleccionado
+            this.classList.add("active");
+
+            const targetPage = this.getAttribute("href");
+
+            fetch(targetPage)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`No se pudo cargar ${targetPage}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    worksContainer.innerHTML = html;
+                })
+                .catch(error => {
+                    console.error("Error al cargar el contenido:", error);
+                });
+        });
     });
 });
