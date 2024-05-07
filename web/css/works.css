@@ -1,47 +1,67 @@
+/* Estilos generales para la página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa;
 }
 
-#mini-menu {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+/* Contenedor principal */
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el mini-menu */
+.mini-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #007bff;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-#mini-menu a {
+.mini-menu a {
     text-decoration: none;
     color: #fff;
+    font-size: 16px;
     padding: 10px 20px;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-#mini-menu a:hover {
-    background-color: #555;
+.mini-menu a:hover {
+    background-color: #0056b3;
 }
 
-/* Estilos para el contenedor del menú */
-.menu-container {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para los enlaces del menú */
-.menu-container a {
-    display: block;
-    margin-bottom: 10px;
+/* Estilo para el mensaje inicial */
+#initial-message {
+    text-align: center;
+    font-size: 18px;
     color: #333;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    margin-top: 20px;
 }
 
-.menu-container a:hover {
-    color: #007bff; /* Cambia el color al pasar el mouse por encima */
+/* Media queries para tamaños de pantalla específicos */
+@media (max-width: 600px) {
+    /* Estilos para pantallas pequeñas */
+    .mini-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mini-menu a {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos para pantallas muy pequeñas (móviles) */
+    .mini-menu a {
+        padding: 10px;
+    }
 }
