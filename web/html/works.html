@@ -10,29 +10,21 @@
     <div id="app">
         <!-- Menú -->
         <div id="mini-menu" class="mini-menu">
-            <a href="/web/html/works/all.html">Todo</a>
+            <a href="/web/html/works/all.html" onclick="loadCategoryContent('all'); return false;">Todo</a>
             <a href="/web/html/works/apps.html">Apps</a>
             <a href="/web/html/works/menu.html">Menu</a>
             <a href="/web/html/works/login.html">Logins</a>
         </div>
-
-<!-- Contenido principal -->
-<div class="container-secundario"> 
-    <div class="headers">
-        <h1>Home</h1> <!-- Título inicial -->
-        <hr class="linea-separadora">
-    </div>
-    <div id="secundarios">
-        <!-- Aquí se cargará el contenido dinámicamente -->
-        <!-- Contenido dinámico se insertará aquí -->
-        <footer class="copyright">
-            <p>© 2024 All Rights Reserved by Jeremy MK.</p>
-        </footer>
-    </div>
-</div>     
-            <!-- <div id="works" class="works">
-                <p>Aún se encuentra en desarrollo. 🚧</p>
-            </div> -->
+        
+        <!-- Contenedor principal para cargar contenido de Works -->
+        <div id="works-container">
+            <!-- Aquí se cargará el contenido específico de Works -->
+        </div>
+        
+        <!-- Contenedor para el otro menú de Works -->
+        <div id="works-menu-container">
+            <!-- Aquí se renderizará el otro menú de Works -->
+        </div>
     </div>
 
     <script src="/web/html/works/works.js"></script> <!-- Enlace al archivo JavaScript -->
