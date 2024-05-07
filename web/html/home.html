@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-..." crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/web/css/home.css">
@@ -12,71 +11,63 @@
 </head>
 <body>
 
-<!-- Menu -->
-<div class="menu">
-    <ul class="menu-items">
-        <li><a href="#menu">🏠 Home</a></li>
-        <li><a href="#" onclick="loadContent('about-me')" id="about-me">👨 About Me</a></li>
-        <li><a href="#" onclick="loadContent('works-home')">💼 Works</a></li>
-    </ul>        
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </div>
-</div>
-<!-- End Menu -->
-
 <div class="container-principal">
-    <!-- Contenedor Principal -->
+    <!-- Menú -->
+    <div class="menu">
+        <ul class="menu-items">
+            <li><a href="#menu">🏠 Home</a></li>
+            <li><a href="#" onclick="loadContent('about-me')" id="about-me">👨 About Me</a></li>
+            <li><a href="#" onclick="loadContent('works-home')">💼 Works</a></li>
+        </ul>        
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+    <!-- End Menú -->
+
+    <!-- Contenido principal -->
     <div id="principal"> 
         <div class="img">
             <img src="/Public/field-6574455_640.jpg" alt="Perfil">
         </div>
-
         <div class="name">
             <p>Jeremy Domínguez</p>
             <hr>
         </div>
-
         <div class="social-buttons">
             <button id="instagram-btn"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/jer3_21/" target="_blank"> Instagram</a></button>
             <button id="linkedin-btn"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/jeremy-dominguez-8a94a2241/" target="_blank"> LinkedIn</a></button>
             <button id="github-btn"><i class="fab fa-github"></i><a href="https://github.com/jeremyda173" target="_blank"> GitHub</a></button>
         </div>
-
         <div class="datos-container">
             <ul>
                 <li><i class="fas fa-map-marker-alt"></i><b>Ubicación:</b> La Vega / República Dominicana</li>
-                <hr>
                 <li><i class="far fa-envelope"></i><b>Email:</b> jeremydominguez.cemas@gmail.com</li>
-                <hr>
                 <li><i class="fas fa-phone"></i><b>Teléfono:</b> (+1) 809-387-6879</li>
-                <hr>
                 <li><i class="far fa-calendar-alt"></i><b>Fecha de nacimiento:</b> 09/30/2005</li>
             </ul>
         </div>
-
         <div class="botao-container">
             <button class="buttond">
                 <span class="button-content"><a href="/Jeremy/Curriculum.pdf" target="_blank">Curriculum V</a></span>
             </button> 
         </div>
     </div>
+    <!-- End Contenido principal -->
+
+    <!-- Contenido secundario -->
+    <div class="container-secundario"> 
+        <div class="header">
+            <h1>Home</h1> <!-- Título inicial -->
+            <hr class="linea-separadora">
+        </div>
+        <div id="secundario">
+            <!-- Aquí se cargará el contenido dinámicamente -->
+        </div>
+    </div>
+    <!-- End Contenido secundario -->
+
 </div>
 
-<!-- Contenedor Secundario -->
-
-<div class="container-secundario"> 
-    <div class="header">
-        <h1>Home</h1> <!-- Título inicial -->
-        <hr class="linea-separadora">
-    </div>
-    <div id="secundario">
-        <!-- Aquí se cargará el contenido dinámicamente -->
-        <!-- Contenido dinámico se insertará aquí -->
-        <footer class="copyright">
-            <p>© 2024 All Rights Reserved by Jeremy MK.</p>
-        </footer>
-    </div>
-</div>
 </body>
 </html>
