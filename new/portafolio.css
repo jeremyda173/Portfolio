@@ -1,0 +1,291 @@
+/* Reset de estilos y fuentes */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Estilo del contenedor principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Estilo de la columna izquierda */
+.left-column {
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid #ddd;
+    width: 30%; /* Ancho de la columna izquierda */
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las redes sociales */
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px; /* Espacio entre cada ícono */
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Añadir posición relativa para alinear el span */
+}
+
+/* Colores de fondo para cada red social */
+.social .instagram {
+    background-color: #E4405F; /* Color de fondo para Instagram */
+}
+
+.social .github {
+    background-color: #333; /* Color de fondo para GitHub */
+}
+
+.social .linkedin {
+    background-color: #0077B5; /* Color de fondo para LinkedIn */
+}
+
+/* Efecto de escala y mostrar nombre al hacer hover */
+.social a:hover {
+    transform: scale(1.1);
+}
+
+/* Nombre de la red social */
+.social a span {
+    display: none; /* Ocultar inicialmente */
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0; /* Ocultar el span al principio */
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar el nombre de la red social al hacer hover */
+.social a:hover span {
+    display: block;
+    opacity: 1;
+}
+
+
+/* Estilo para la sección de datos personales */
+.personal-info {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.personal-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.personal-info li {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+/* Estilo para el contenedor de cada ítem de información */
+.info-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Fondo gris claro para el contenedor */
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Estilo para el contenedor del ícono */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%; /* Forma circular */
+    background-color: #333; /* Fondo oscuro para el contenedor del ícono */
+    margin-right: 15px;
+}
+
+/* Estilo para el ícono dentro del contenedor */
+.icon-container i {
+    font-size: 18px;
+    color: #fff; /* Color del ícono (blanco) por defecto */
+}
+
+/* Estilo específico para cada tipo de ícono */
+.icon-container i.fa-map-marker-alt {
+    color: #007bff; /* Color azul para el ícono de ubicación */
+}
+
+.icon-container i.fa-envelope {
+    color: #28a745; /* Color verde para el ícono de correo electrónico */
+}
+
+.icon-container i.fa-phone {
+    color: #ffc107; /* Color amarillo para el ícono de teléfono */
+}
+
+.icon-container i.fa-calendar-alt {
+    color: #dc3545; /* Color rojo para el ícono de fecha de nacimiento */
+}
+
+/* Estilo para el texto de la información */
+.info-container span {
+    font-weight: bold;
+}
+
+/* Estilo para el enlace de correo electrónico */
+.info-container a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-container a:hover {
+    color: #0056b3; /* Cambiar color al hacer hover */
+}
+
+
+
+/* Estilos para el botón de descarga Cv */
+.botao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttond {
+    position: relative;
+    overflow: hidden;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 1.5rem;
+    background: #3d3a4e;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.buttond:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 1;
+}
+
+.buttond::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: linear-gradient(
+        82.3deg,
+        rgba(150, 93, 233, 1) 10.8%,
+        rgba(99, 88, 238, 1) 94.3%
+    );
+    transition: all 0.475s;
+}
+
+.botao-container button a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Usa el color de texto predeterminado */
+}
+
+
+/* Estilo de la columna derecha */
+.right-column {
+    flex: 2;
+    padding-left: 20px;
+    width: 65%; /* Ancho de la columna derecha */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid #007bff;
+}
+
+.content {
+    display: none;
+    margin-top: 20px;
+}
+
+.content h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Media queries para diseño responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        border-right: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        padding: 10px 0;
+        border-bottom: none;
+        text-align: center;
+    }
+}

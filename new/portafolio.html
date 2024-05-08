@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Elegante con Iconos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="portafolio.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <img class="profile-img" src="/Public/field-6574455_640.jpg" alt="Tu Foto">
+
+            <div class="social">
+                <a href="https://www.instagram.com/tuinstagram" target="_blank" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://github.com/tuusuario" target="_blank" class="github">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/tulinkedin" target="_blank" class="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+                      
+
+            <div class="personal-info">
+                <ul>
+                    <li>
+                        <div class="info-container">
+                            <div class="icon-container">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>La Vega / República Dominicana</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info-container">
+                            <div class="icon-container">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <span>jeremydominguez.cemas@gmail.com</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info-container">
+                            <div class="icon-container">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span>(+1) 809-387-6879</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="info-container">
+                            <div class="icon-container">
+                                <i class="far fa-calendar-alt"></i>
+                            </div>
+                            <span>09/30/2005</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>             
+            <div class="botao-container">
+                <button class="buttond">
+                    <span class="button-content"><a href="/Jeremy/Curriculum.pdf" target="_blank">Curriculum V</a></span>
+                </button> 
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="menu">
+                <a href="#" onclick="showContent('home')"><i class="fas fa-home"></i> Home</a>
+                <a href="#" onclick="loadContent('about-me')"><i class="fas fa-user"></i> About Me</a>
+                <a href="#" onclick="loadContent('works-home')"><i class="fas fa-briefcase"></i> Works</a>
+            </div>
+            <div class="content" id="home">
+                <h2>Bienvenido a mi Portafolio</h2>
+                <p>¡Hola! Soy Jeremy, un desarrollador web apasionado por crear experiencias en línea increíbles.</p>
+                <p>Explora mi portafolio para conocer más sobre mis proyectos y habilidades.</p>
+            </div>
+
+            <div class="content" id="about-me" style="display: none;">
+                <!-- Aquí se cargará dinámicamente el contenido de about-me.html -->
+            </div>
+
+            <div class="content" id="works-home" style="display: none;">
+                <!-- Aquí se cargará dinámicamente el contenido de works.html -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showContent(sectionId) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // Mostrar el contenido de la sección seleccionada
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function loadContent(pageName) {
+            const filePath = `/new/${pageName}.html`; // Ruta al archivo HTML de la página
+            const aboutMeContainer = document.getElementById('about-me');
+
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    aboutMeContainer.innerHTML = html; // Inserta el HTML cargado en el contenedor de About Me
+                    showContent('about-me'); // Mostrar la sección de About Me después de cargar el contenido
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                });
+        }
+
+        // Mostrar la sección principal (Home) al cargar la página
+        showContent('home');
+    </script>
+</body>
+</html>
