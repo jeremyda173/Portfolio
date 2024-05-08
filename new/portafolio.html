@@ -74,30 +74,21 @@
         <div class="right-column">
             <div class="menu">
                 <a href="#" onclick="showContent('home')"><i class="fas fa-home"></i> Home</a>
-                <a href="#" onclick="showContent('about-me')"><i class="fas fa-user"></i> About Me</a>
-                <a href="#" onclick="showContent('works')"><i class="fas fa-briefcase"></i> Works</a>
+                <a href="#" onclick="loadContent('about-me')"><i class="fas fa-user"></i> About Me</a>
+                <a href="#" onclick="loadContent('works-home')"><i class="fas fa-briefcase"></i> Works</a>
             </div>
-
             <div class="content" id="home">
-                <h2>Bienvenido</h2>
-                <p>Bienvenido a mi portafolio. Aquí encontrarás información sobre mí y mis trabajos.</p>
+                <h2>Bienvenido a mi Portafolio</h2>
+                <p>¡Hola! Soy Jeremy, un desarrollador web apasionado por crear experiencias en línea increíbles.</p>
+                <p>Explora mi portafolio para conocer más sobre mis proyectos y habilidades.</p>
             </div>
 
             <div class="content" id="about-me" style="display: none;">
-                <h2>Acerca de Mí</h2>
-                <p>¡Hola! Soy [Tu Nombre], un desarrollador web apasionado por crear experiencias en línea increíbles.</p>
-                <p>Me especializo en el desarrollo web frontend y backend, utilizando tecnologías como HTML, CSS, JavaScript, Node.js y más.</p>
+                <!-- Aquí se cargará dinámicamente el contenido de about-me.html -->
             </div>
 
-            <div class="content" id="works" style="display: none;">
-                <h2>Mis Trabajos</h2>
-                <p>Aquí puedes ver algunos de mis proyectos destacados:</p>
-                <ul>
-                    <li>Proyecto 1 - Descripción breve</li>
-                    <li>Proyecto 2 - Descripción breve</li>
-                    <li>Proyecto 3 - Descripción breve</li>
-                    <!-- Agrega más proyectos según sea necesario -->
-                </ul>
+            <div class="content" id="works-home" style="display: none;">
+                <!-- Aquí se cargará dinámicamente el contenido de works.html -->
             </div>
         </div>
     </div>
@@ -112,7 +103,27 @@
             // Mostrar el contenido de la sección seleccionada
             document.getElementById(sectionId).style.display = 'block';
         }
-        
+
+        function loadContent(pageName) {
+            const filePath = `/new/${pageName}.html`; // Ruta al archivo HTML de la página
+            const aboutMeContainer = document.getElementById('about-me');
+
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    aboutMeContainer.innerHTML = html; // Inserta el HTML cargado en el contenedor de About Me
+                    showContent('about-me'); // Mostrar la sección de About Me después de cargar el contenido
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                });
+        }
+
         // Mostrar la sección principal (Home) al cargar la página
         showContent('home');
     </script>
