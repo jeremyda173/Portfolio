@@ -1,12 +1,8 @@
-// Función para iniciar sesión con Google
 function loginWithGoogle() {
-    // Configuración del cliente OAuth de Google
-    const clientId = 'TU_ID_DE_CLIENTE_DE_GOOGLE';
-    const redirectUri = 'URL_DE_REDIRECCION_DE_AUTH';
+    const clientId = '589973080117-pvctr2n900v0badf43a3nokmsekfvlnn.apps.googleusercontent.com';
+    const redirectUri = 'https://loginconoauth.com';
 
-    // URL de autorización de Google
-    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=token&scope=email profile`;
+    const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=token&scope=email%20profile`;
 
-    // Redirigir al usuario a la página de autorización de Google
     window.location.href = authUrl;
 }
