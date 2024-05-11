@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Incluye las bibliotecas de Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js"></script>
+    <link rel="stylesheet" href="./login-firebase.css">
+    <title>Iniciar Sesión con Firebase Auth</title>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h1>Iniciar Sesión</h1>
+        <form onsubmit="event.preventDefault(); loginUser();">
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div class="footer">
+            <p>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
+        </div>
+    </div>
+    <!-- Luego, carga tu archivo JavaScript -->
+    <script src="./login-firebase.js"></script>
+</body>
+</html>
