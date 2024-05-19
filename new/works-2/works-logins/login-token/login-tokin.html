@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="login-token.css">
 </head>
+
 <body>
     <div class="animation-container">
         <div class="login-container">
@@ -24,6 +26,23 @@
     </div>
     <img src="/Public/Plane.png" class="custom-cursor" style="display: none;"> <!-- Imagen del avión como cursor -->
     <script>
+
+                   // Custom cursor logic
+                   document.addEventListener("DOMContentLoaded", function () {
+                const planeCursor = document.querySelector('.custom-cursor');
+
+                // Ocultamos el cursor original
+                document.body.style.cursor = 'none';
+
+                // Mostramos el cursor del avión
+                planeCursor.style.display = 'block';
+
+                // Seguir el cursor con el avión
+                document.addEventListener('mousemove', function (e) {
+                    planeCursor.style.left = `${e.clientX}px`;
+                    planeCursor.style.top = `${e.clientY}px`;
+                });
+            })
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('login-form');
             const errorMessage = document.getElementById('error-message');
@@ -40,33 +59,17 @@
                     },
                     body: JSON.stringify({ username, password })
                 })
-                .then(response => response.json())
-                .then(data => {
-                    errorMessage.textContent = data.message;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    errorMessage.textContent = 'Error en el servidor';
-                });
+                    .then(response => response.json())
+                    .then(data => {
+                        errorMessage.textContent = data.message;
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        errorMessage.textContent = 'Error en el servidor';
+                    });
             });
-
-            // Custom cursor logic
-            document.addEventListener("DOMContentLoaded", function () {
-    const planeCursor = document.querySelector('.custom-cursor');
-
-    // Ocultamos el cursor original
-    document.body.style.cursor = 'none';
-
-    // Mostramos el cursor del avión
-    planeCursor.style.display = 'block';
-
-    // Seguir el cursor con el avión
-    document.addEventListener('mousemove', function (e) {
-        planeCursor.style.left = `${e.clientX}px`;
-        planeCursor.style.top = `${e.clientY}px`;
-    });
-})
         });
     </script>
 </body>
+
 </html>
