@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+            margin: 0;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            width: 340px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .card-title {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .card-description {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .card-languages {
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        .language-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .language-icons i {
+            font-size: 2em;
+        }
+        .fa-react {
+            color: #61dafb;
+        }
+        .fa-js-square {
+            color: #f7df1e;
+        }
+        .fa-next-js {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./../../Public/Screenshot 2024-05-06 102055.png" alt="Leo Messi">
+        <div class="card-content">
+            <div class="card-title">Leo Messi</div>
+            <div class="card-description">Una aplicación dedicada a Leo Messi, utilizando React con Next.js y estilos de Tailwind CSS.</div>
+            <div class="card-languages">Tecnologías Utilizadas:</div>
+            <div class="language-icons">
+                <i class="fab fa-react" title="React"></i>
+                <!-- <i class="fab fa-js-square" title="JavaScript"></i> -->
+                <i class="fab fa-next-js" title="Next.js"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
