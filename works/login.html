@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logins</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            margin-top: 30px; /* Espacio superior entre el encabezado y las tarjetas */
+        }
+        .card {
+            width: 250px; /* Ancho fijo para cada tarjeta */
+            height: 350px; /* Altura fija para cada tarjeta */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Alinear contenido */
+        }
+        .card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: auto; /* Centrar la imagen */
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #007bff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            height: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Logins</h1>
+    </div>
+    <div class="card-container" id="cardContainer">
+        <!-- Inicio de Sesión Tradicional -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Imagen de Login">
+            <h2>Inicio de Sesión Tradicional</h2>
+            <p>Iniciar sesión utilizando nombre de usuario y contraseña.</p>
+            <a href="/new/works-2/works-logins/login-basic/login-basic.html" class="btn">Ver más</a>
+        </div>
+
+        <!-- Iniciar Sesión con OAuth -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Imagen de Login">
+            <h2>Iniciar Sesión con OAuth</h2>
+            <p>Iniciar sesión utilizando un proveedor de OAuth como Google o Facebook.</p>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+
+        <!-- Registro Conectado a MySQL -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Imagen de Registro">
+            <h2>Registro Conectado a MySQL</h2>
+            <p>Registra nuevos usuarios almacenando datos en una base de datos MySQL.</p>
+            <a href="./../works-2/works-logins/login-mysql/login-mysql.html" class="btn">Ver más</a>
+        </div>
+
+        <!-- Iniciar Sesión con Firebase Auth -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Imagen de Login">
+            <h2>Iniciar Sesión con Firebase Auth</h2>
+            <p>Iniciar sesión utilizando Firebase Authentication para aplicaciones web o móviles.</p>
+            <a href="./../works-2/works-logins/login-firebase/login-firebase.html" class="btn">Ver más</a>
+        </div>
+
+        <!-- Iniciar Sesión con JSON Web Tokens (JWT) -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Imagen de Login">
+            <h2>Iniciar Sesión con JSON Web Tokens (JWT)</h2>
+            <p>Iniciar sesión utilizando tokens seguros basados en estándares JSON Web Tokens (JWT).</p>
+            <a href="/new/works-2/works-logins/login-token/login-tokin.html" class="btn">Ver más</a>
+        </div>
+
+        <!-- Iniciar Sesión con OAuth2 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Imagen de Login">
+            <h2>Iniciar Sesión con OAuth2</h2>
+            <p>Iniciar sesión utilizando el protocolo OAuth 2.0 para autorización segura.</p>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+    </div>
+</body>
+</html>
